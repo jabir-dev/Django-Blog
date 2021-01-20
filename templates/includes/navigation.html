@@ -1,0 +1,28 @@
+{% load static %}
+	<!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light top-nav fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'article:articles'  %}">
+            <img src="{% static 'images/sekil3.jpg' %}" width="180" height="50" alt="logo" />
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'article:articles'  %}">Ana Sayfa</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="">Araçlar</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'about' %}">Hakkımızda</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'contact' %}">İletişim</a>
+                  </li>
+               </ul>
+            </div>
+        </div>
+    </nav>

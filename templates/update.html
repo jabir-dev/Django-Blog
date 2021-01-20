@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}<!--  CRISPY FORMS -->
+
+
+
+{% block body %}
+
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+
+        <h3> Makale Guncelle  </h3>
+        <hr>
+
+        <form method="POST">
+            {% csrf_token %}
+            {{form.media}}
+            {{form|crispy}}<!--  CRISPY FORMS -->
+            <br>
+            <button type="submit" class="btn btn-danger"> Makaleni Guncelle</button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock body %}
+ 
